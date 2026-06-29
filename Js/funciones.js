@@ -1,6 +1,4 @@
-//==============================
-// CLASE
-//==============================
+
 
 class Servicio {
 
@@ -20,10 +18,6 @@ class Servicio {
     }
 
 }
-
-//==============================
-// ARREGLO
-//==============================
 
 let listaServicios = [
 
@@ -68,10 +62,6 @@ let listaServicios = [
 
 ];
 
-//==============================
-// OBTENER DATOS DEL FORMULARIO
-//==============================
-
 function obtenerDatos(){
 
     return new Servicio(
@@ -91,9 +81,7 @@ function obtenerDatos(){
 
 }
 
-//==============================
-// LIMPIAR FORMULARIO
-//==============================
+
 
 function limpiarFormulario(){
 
@@ -110,9 +98,6 @@ function limpiarFormulario(){
 
 }
 
-//==============================
-// ALERTA BOOTSTRAP
-//==============================
 
 function mostrarMensaje(texto,tipo){
 
@@ -138,9 +123,6 @@ function mostrarMensaje(texto,tipo){
 
 }
 
-//==============================
-// LISTAR REGISTROS
-//==============================
 
 function listar(){
 
@@ -173,9 +155,6 @@ function listar(){
 
 }
 
-//==============================
-// ESTADÍSTICAS
-//==============================
 
 function estadisticas(){
 
@@ -205,9 +184,6 @@ function estadisticas(){
     Math.round(promedio).toLocaleString("es-CL");
 }
 
-//==============================
-// CARGA INICIAL
-//==============================
 
 window.onload = function(){
 
@@ -219,15 +195,13 @@ window.onload = function(){
 
 }
 
-//==============================
-// REGISTRAR
-//==============================
+
 
 function registrar(){
 
     let servicio = obtenerDatos();
 
-    // Validar datos vacíos
+
 
     if(
         servicio.codigo=="" ||
@@ -248,8 +222,7 @@ function registrar(){
 
     }
 
-    // Validar código repetido
-
+  
     let existe = listaServicios.find(s => s.codigo === servicio.codigo);
 
     if(existe){
@@ -260,7 +233,6 @@ function registrar(){
 
     }
 
-    // Registrar
 
     listaServicios.push(servicio);
 
@@ -274,9 +246,6 @@ function registrar(){
 
 }
 
-//==============================
-// CONSULTAR
-//==============================
 
 function consultar(){
 
@@ -316,10 +285,6 @@ function consultar(){
 
 }
 
-//==============================
-// MODIFICAR
-//==============================
-
 function modificar(){
 
     let servicio = obtenerDatos();
@@ -354,9 +319,7 @@ function modificar(){
 
 }
 
-//==============================
-// ELIMINAR
-//==============================
+
 
 function eliminarServicio(){
 
